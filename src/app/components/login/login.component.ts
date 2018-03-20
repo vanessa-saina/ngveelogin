@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
                     // login successful
                     let user = JSON.parse(localStorage.getItem('currentUser'));
                     if(user.role=="student"){
-<<<<<<< HEAD
                         this.router.navigate(['/students']);
                     }else if(user.role=="lecture"){
                         this.router.navigate(['/lecturers']);
@@ -41,14 +40,6 @@ export class LoginComponent implements OnInit {
                         this.router.navigate(['/admin'])
                     }
                 }else {
-=======
-                  //  this.router.navigate(['/student']);
-                    this.router.navigate(['/']);
-                  }else{
-                        this.router.navigate(['/']);
-                  }
-                } else {
->>>>>>> a46ee95b8fb5c4415eb2327212a052d82d6ff0cb
                     // login failed
                     this.error = 'Username or password is incorrect';
                     this.loading = false;

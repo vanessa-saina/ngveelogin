@@ -13,7 +13,7 @@ export class AdminService {
         private authenticationService: AuthenticationService) {
     }
 
-    getadmins(): Observable<Admin[]> {
+    getAdmins(): Observable<Admin[]> {
         // add authorization header with jwt token
         let headers = new Headers({ 'Authorization': 'token ' + this.authenticationService.token });
         let options = new RequestOptions({ headers: headers });
