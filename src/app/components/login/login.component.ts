@@ -25,11 +25,19 @@ export class LoginComponent implements OnInit {
 
     login() {
         this.loading = true;
+          this.error = 'Username or password is incorrect';
         this.authenticationService.login(this.model.username, this.model.password)
             .subscribe(result => {
+
                 if (result === true) {
                     // login successful
+                    let user = JSON.parse(localStorage.getItem('currentUser'));
+                    if(user.role=="student"){
+                  //  this.router.navigate(['/student']);
                     this.router.navigate(['/']);
+                  }else{
+                        this.router.navigate(['/']);
+                  }
                 } else {
                     // login failed
                     this.error = 'Username or password is incorrect';
