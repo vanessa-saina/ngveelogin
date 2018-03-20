@@ -7,9 +7,12 @@ import { routing } from './app.routing';
 //App Modules
 import { AppComponent } from './app.component';
 import { AuthGuard } from './guards/index';
-import { AuthenticationService, UserService, PayerService } from './services/index';
+import { AuthenticationService, UserService, PayerService, StudentsService, LecturerService, AdminService } from './services/index';
 import { LoginComponent } from './components/login/index';
 import { HomeComponent } from './components/home/index';
+import { LecturerComponent } from './components/lecturer/index';
+import { AdminComponent } from './components/admin/index';
+import { StudentsComponent } from './components/students/index';
 
 //Material Module
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,7 +23,10 @@ import { HomeComponent } from './components/home/index';
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    LecturerComponent,
+    AdminComponent,
+    StudentsComponent
   ],
   imports: [
       BrowserModule,
@@ -34,6 +40,9 @@ import { HomeComponent } from './components/home/index';
     AuthGuard,
     AuthenticationService,
     PayerService,
+    StudentsService,
+    LecturerService,
+    AdminService,
     UserService],
   bootstrap: [AppComponent]
 })
