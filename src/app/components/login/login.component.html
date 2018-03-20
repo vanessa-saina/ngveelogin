@@ -15,7 +15,7 @@
             <input class="form-control" type="password" required="" placeholder="Password" name="password" [(ngModel)]="model.password" #password="ngModel" required>
               <span *ngIf="f.submitted && !password.valid" >Password is required</span>
           </div>
-          <span *ngIf="error" >{{error}} </span>
+          <span style="color:red" *ngIf="error" >{{error}} </span>
         </div>
         <div class="form-group">
           <div class="col-md-12">
