@@ -36,7 +36,6 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<<<<<<< HEAD
 <![endif]-->
 <!--
 <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
@@ -48,19 +47,6 @@
 <body>
     <app>Loading...</app>
 
-=======
-<![endif]-->
-<!--
-<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
--->
-    <script>
-    //   System.import('app').catch(function (err) { console.error(err); });
-    </script>
-</head>
-<body>
-    <app>Loading...</app>
-
->>>>>>> a46ee95b8fb5c4415eb2327212a052d82d6ff0cb
     <!-- /#wrapper -->
     <!-- jQuery -->
     <script src="assets/plugins/bower_components/jquery/dist/jquery.min.js"></script>
@@ -104,161 +90,6 @@
     <script src="assets/ample/js/custom.min.js"></script>
     <script src="assets/ample/js/dashboard3.js"></script>
     <!--Style Switcher -->
-<<<<<<< HEAD
     <script src="assets/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
 </body>
 </html>
-=======
-    <script src="assets/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
-    <!-- Custom tab JavaScript -->
-<script src="assets/ample/js/cbpFWTabs.js"></script>
-<!-- Custom Theme JavaScript -->
-<script src="assets/ample/js/custom.min.js"></script>
-<!-- Sweet-Alert  -->
-<script src="assets/plugins/bower_components/sweetalert/sweetalert.min.js"></script>
-<link href="assets/ample/css/vee.css" rel="stylesheet" type="text/css">
-
-<script src="assets/ample/star-rating/dist/star-rating.min.js"></script>
-
-
-
-<script type="text/javascript">
-$(document).ready(function(){
-    // Check Radio-box
-    $(".rating input:radio").attr("checked", false);
-
-    $('.rating input').click(function () {
-        $(".rating span").removeClass('checked');
-        $(this).parent().addClass('checked');
-    });
-
-    $('input:radio').change(
-      function(){
-        var userRating = this.value;
-        alert(userRating);
-    });
-});
-</script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-    // Check Radio-box
-    $(".rating input:radio").attr("checked", false);
-
-    $('.rating input').click(function () {
-        $(".rating span").removeClass('checked');
-        $(this).parent().addClass('checked');
-    });
-
-    $('input:radio').change(
-      function(){
-        var userRating = this.value;
-        alert(userRating);
-    });
-});
-</script>
-<script type="text/javascript">
-    (function () {
-        $('#exampleBasic').wizard({
-            onFinish: function () {
-                swal("Message Finish!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
-            }
-        });
-        $('#exampleBasic2').wizard({
-            onFinish: function () {
-                swal("Message Finish!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
-            }
-        });
-        $('#exampleValidator').wizard({
-            onInit: function () {
-                $('#validation').formValidation({
-                    framework: 'bootstrap'
-                    , fields: {
-                        username: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'The username is required'
-                                }
-                                , stringLength: {
-                                    min: 6
-                                    , max: 30
-                                    , message: 'The username must be more than 6 and less than 30 characters long'
-                                }
-                                , regexp: {
-                                    regexp: /^[a-zA-Z0-9_\.]+$/
-                                    , message: 'The username can only consist of alphabetical, number, dot and underscore'
-                                }
-                            }
-                        }
-                        , email: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'The email address is required'
-                                }
-                                , emailAddress: {
-                                    message: 'The input is not a valid email address'
-                                }
-                            }
-                        }
-                        , password: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'The password is required'
-                                }
-                                , different: {
-                                    field: 'username'
-                                    , message: 'The password cannot be the same as username'
-                                }
-                            }
-                        }
-                    }
-                });
-            }
-            , validator: function () {
-                var fv = $('#validation').data('formValidation');
-                var $this = $(this);
-                // Validate the container
-                fv.validateContainer($this);
-                var isValidStep = fv.isValidContainer($this);
-                if (isValidStep === false || isValidStep === null) {
-                    return false;
-                }
-                return true;
-            }
-            , onFinish: function () {
-                $('#validation').submit();
-                swal("Message Finish!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
-            }
-        });
-        $('#accordion').wizard({
-            step: '[data-toggle="collapse"]'
-            , buttonsAppendTo: '.panel-collapse'
-            , templates: {
-                buttons: function () {
-                    var options = this.options;
-                    return '<div class="panel-footer"><ul class="pager">' + '<li class="previous">' + '<a href="#' + this.id + '" data-wizard="back" role="button">' + options.buttonLabels.back + '</a>' + '</li>' + '<li class="next">' + '<a href="#' + this.id + '" data-wizard="next" role="button">' + options.buttonLabels.next + '</a>' + '<a href="#' + this.id + '" data-wizard="finish" role="button">' + options.buttonLabels.finish + '</a>' + '</li>' + '</ul></div>';
-                }
-            }
-            , onBeforeShow: function (step) {
-                step.$pane.collapse('show');
-            }
-            , onBeforeHide: function (step) {
-                step.$pane.collapse('hide');
-            }
-            , onFinish: function () {
-                swal("Message Finish!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
-            }
-        });
-    })();
-</script>
-<script type="text/javascript">
-    (function () {
-            [].slice.call(document.querySelectorAll('.sttabs')).forEach(function (el) {
-            new CBPFWTabs(el);
-        });
-    })();
-</script>
- <script src="assets/plugins/bower_components/toast-master/js/jquery.toast.js"></script>
-</body>
-</html>
->>>>>>> a46ee95b8fb5c4415eb2327212a052d82d6ff0cb

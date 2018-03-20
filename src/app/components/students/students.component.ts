@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { User } from '../../models/index';
-import { Payer } from '../../models/index';
 import { Students } from '../../models/index';
 import { UserService } from '../../services/index';
-import { PayerService } from '../../services/index';
 import { StudentsService } from '../../services/index';
 
 @Component({

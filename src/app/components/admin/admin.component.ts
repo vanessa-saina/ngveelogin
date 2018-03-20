@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { User, Admin } from '../../models/index';
-import { Payer } from '../../models/index';
 import { UserService } from '../../services/index';
-import { PayerService } from '../../services/index';
 import { AdminService } from '../../services/index';
 
 @Component({
