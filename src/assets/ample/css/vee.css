@@ -3,9 +3,6 @@
 /* Optional theme */
 
 /*@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');*/
- body {
-    margin-top:30px;
-}
 .stepwizard-step p {
     margin-top: 0px;
     color:#666;
@@ -60,35 +57,4 @@
     font-size: 12px;
     line-height: 1.428571429;
     border-radius: 15px;
-}
-.rating {
-    float:left;
-    width:300px;
-}
-.rating span { float:right; position:relative; }
-.rating span input {
-    position:absolute;
-    top:0px;
-    left:0px;
-    opacity:0;
-}
-.rating span label {
-    display:inline-block;
-    width:30px;
-    height:30px;
-    text-align:center;
-    color:#FFF;
-    content: '\f005';
-    font-family:fontAwesome;
-    background:#ccc;
-    font-size:30px;
-    margin-right:2px;
-    line-height:30px;
-}
-.rating span:hover ~ span label,
-.rating span:hover label,
-.rating span.checked label,
-.rating span.checked ~ span label {
-    background:#F90;
-    color:#FFF;
 }
