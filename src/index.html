@@ -29,7 +29,6 @@
 <link href="assets/plugins/bower_components/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
 <!-- color CSS -->
  <link href="assets/ample/css/colors/default.css" id="theme" rel="stylesheet">
-	<link href="assets/ample/star-rating/dist/star-rating.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -98,46 +97,6 @@
 <!-- Sweet-Alert  -->
 <script src="assets/plugins/bower_components/sweetalert/sweetalert.min.js"></script>
 <link href="assets/ample/css/vee.css" rel="stylesheet" type="text/css">
-
-<script src="assets/ample/star-rating/dist/star-rating.min.js"></script>
-
-
-
-<script type="text/javascript">
-$(document).ready(function(){
-    // Check Radio-box
-    $(".rating input:radio").attr("checked", false);
-
-    $('.rating input').click(function () {
-        $(".rating span").removeClass('checked');
-        $(this).parent().addClass('checked');
-    });
-
-    $('input:radio').change(
-      function(){
-        var userRating = this.value;
-        alert(userRating);
-    });
-});
-</script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-    // Check Radio-box
-    $(".rating input:radio").attr("checked", false);
-
-    $('.rating input').click(function () {
-        $(".rating span").removeClass('checked');
-        $(this).parent().addClass('checked');
-    });
-
-    $('input:radio').change(
-      function(){
-        var userRating = this.value;
-        alert(userRating);
-    });
-});
-</script>
 <script type="text/javascript">
     (function () {
         $('#exampleBasic').wizard({
