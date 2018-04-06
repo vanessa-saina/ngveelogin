@@ -317,8 +317,7 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="icon-trash"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
+                                            <button type="button" alt="default" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -339,8 +338,8 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="icon-trash"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
+                                        
+                                            <button type="button" alt="default" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -361,8 +360,7 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="icon-trash"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
+                                                <button type="button" alt="default" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -383,8 +381,7 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="icon-trash"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
+                                                <button type="button" alt="default" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
                                         </td>
                                     </tr>
          
@@ -395,388 +392,402 @@
                     </div>
                 </div>
          
-                <!-- /.row -->
-                <div class="row">
-              <div class="col-sm-12">
-                <div class="container">
-                <div class="stepwizard">
-                    <div class="stepwizard-row setup-panel">
-                        <div class="stepwizard-step col-xs-3">
-                            <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
-                            <p><small>Presentation</small></p>
+
+                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myLargeModalLabel">Evaluation</h4> </div>
+                            <div class="modal-body">
+                                    <div class="container col-sm-12">
+                                            <div class="stepwizard">
+                                                <div class="stepwizard-row setup-panel">
+                                                    <div class="stepwizard-step col-xs-3">
+                                                        <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
+                                                        <p><small>Presentation</small></p>
+                                                    </div>
+                                                    <div class="stepwizard-step col-xs-3">
+                                                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                                                        <p><small>Subject Matter</small></p>
+                                                    </div>
+                                                    <div class="stepwizard-step col-xs-3">
+                                                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                                                        <p><small>Personal attrributes</small></p>
+                                                    </div>
+                                                    <div class="stepwizard-step col-xs-3">
+                                                        <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                                                        <p><small>Save and finish</small></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                     
+                                            <form role="form">
+                                                <div class="panel panel-primary setup-content" id="step-1">
+                                                    <div class="panel-heading">
+                                                         <h3 class="panel-title">Presentation</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="form-group">
+                                                            <label class="control-label">1. Sets stimulating learning atmosphere</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">2. Use relevant examples illustrations to explain principles and concepts</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">3. Encourage and appreciates students participation</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">4. Presents contents logically and coherently</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">5. Presents contents logically and coherently</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">6. Delivers content in motivating manner</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">7. Uses relevant teaching aids(chalk board,projector,lab,apparatus</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">8. Provides a clear summary of concepts/principles covered in the lesson</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">9. Voice clear and audible</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                     
+                                     
+                            
+                                                        <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                                                    </div>
+                                                </div>
+                                     
+                                                <div class="panel panel-primary setup-content" id="step-2">
+                                                    <div class="panel-heading">
+                                                         <h3 class="panel-title">Suject Matter</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="form-group">
+                                                            <label class="control-label">1. Clear introduction of course objectives and relevancies</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">2. Demonstrate mastery of subject matter</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">3. Adequately covers course outline within the specified time</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">4. Depth of subject coverage(indepth as opposed to superficial treatment)</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">5. Provide guidance to relevant references</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">6. Subject matter relevance to course(as per course outline)</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">7. Assignments(relevant and useful)</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">8. Gives adequate and relevant assignments/CATs</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">9. Provides feedback of assignents/CATs promptly</label>
+                            
+                                                            <select id="star-rating" class="form-control"  required="required">
+                                                                <option value="">Select a rating</option>
+                                                                <option value="5">Excellent</option>
+                                                                <option value="4">Very Good</option>
+                                                                <option value="3">Average</option>
+                                                                <option value="2">Poor</option>
+                                                                <option value="1">Terrible</option>
+                                                            </select>
+                                                        </div>
+                                     
+                                     
+                            
+                            
+                                                        <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                                                    </div>
+                                                </div>
+                                     
+                                                <div class="panel panel-primary setup-content" id="step-3">
+                                                    <div class="panel-heading">
+                                                         <h3 class="panel-title">Personal Attributes</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                            <div class="form-group">
+                                                        <label class="control-label">1. Attendance/pantuality</label>
+                                                        
+                                                                                        <select id="star-rating" class="form-control"  required="required">
+                                                                                            <option value="">Select a rating</option>
+                                                                                            <option value="5">Excellent</option>
+                                                                                            <option value="4">Very Good</option>
+                                                                                            <option value="3">Average</option>
+                                                                                            <option value="2">Poor</option>
+                                                                                            <option value="1">Terrible</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label">2. Interaction with students(friendly,approachable,caring,tolerant)</label>
+                                                        
+                                                                                        <select id="star-rating" class="form-control"  required="required">
+                                                                                            <option value="">Select a rating</option>
+                                                                                            <option value="5">Excellent</option>
+                                                                                            <option value="4">Very Good</option>
+                                                                                            <option value="3">Average</option>
+                                                                                            <option value="2">Poor</option>
+                                                                                            <option value="1">Terrible</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label">3. Availability of lecturer for consultations</label>
+                                                        
+                                                                                        <select id="star-rating" class="form-control"  required="required">
+                                                                                            <option value="">Select a rating</option>
+                                                                                            <option value="5">Excellent</option>
+                                                                                            <option value="4">Very Good</option>
+                                                                                            <option value="3">Average</option>
+                                                                                            <option value="2">Poor</option>
+                                                                                            <option value="1">Terrible</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label">4. Extent to which the consultations are helpful)</label>
+                                                        
+                                                                                        <select id="star-rating" class="form-control"  required="required">
+                                                                                            <option value="">Select a rating</option>
+                                                                                            <option value="5">Excellent</option>
+                                                                                            <option value="4">Very Good</option>
+                                                                                            <option value="3">Average</option>
+                                                                                            <option value="2">Poor</option>
+                                                                                            <option value="1">Terrible</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label">5. Confident in presentation and subject matter</label>
+                                                        
+                                                                                        <select id="star-rating" class="form-control"  required="required">
+                                                                                            <option value="">Select a rating</option>
+                                                                                            <option value="5">Excellent</option>
+                                                                                            <option value="4">Very Good</option>
+                                                                                            <option value="3">Average</option>
+                                                                                            <option value="2">Poor</option>
+                                                                                            <option value="1">Terrible</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label">6. Adequate lecture room preparation</label>
+                                                        
+                                                                                        <select id="star-rating" class="form-control"  required="required">
+                                                                                            <option value="">Select a rating</option>
+                                                                                            <option value="5">Excellent</option>
+                                                                                            <option value="4">Very Good</option>
+                                                                                            <option value="3">Average</option>
+                                                                                            <option value="2">Poor</option>
+                                                                                            <option value="1">Terrible</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label">7. Students control/class discipline</label>
+                                                        
+                                                                                        <select id="star-rating" class="form-control"  required="required">
+                                                                                            <option value="">Select a rating</option>
+                                                                                            <option value="5">Excellent</option>
+                                                                                            <option value="4">Very Good</option>
+                                                                                            <option value="3">Average</option>
+                                                                                            <option value="2">Poor</option>
+                                                                                            <option value="1">Terrible</option>
+                                                                                        </select>
+                                                                                    </div>
+                            
+                            
+                                                        <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                                                    </div>
+                                                </div>
+                                     
+                                                <div class="panel panel-primary setup-content" id="step-4">
+                                                    <div class="panel-heading">
+                                                         <h3 class="panel-title">Save and Finish</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="form-group">
+                                                            <label class="control-label">Additional Comments</label>
+                                                            <input maxlength="200" id="text" type="text" required="required" class="form-control" placeholder="Enter Company Name" />
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Recommendation</label>
+                                                            <input maxlength="200" id="text" type="text" required="required" class="form-control" placeholder="Enter Company Address" />
+                                                        </div>
+                                                        <button class="btn btn-success pull-right" type="submit">Finish!</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal">Close</button>
+                            </div>
                         </div>
-                        <div class="stepwizard-step col-xs-3">
-                            <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-                            <p><small>Subject Matter</small></p>
-                        </div>
-                        <div class="stepwizard-step col-xs-3">
-                            <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-                            <p><small>Personal attrributes</small></p>
-                        </div>
-                        <div class="stepwizard-step col-xs-3">
-                            <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
-                            <p><small>Save and finish</small></p>
-                        </div>
+                        <!-- /.modal-content -->
                     </div>
+                    <!-- /.modal-dialog -->
                 </div>
-         
-                <form role="form">
-                    <div class="panel panel-primary setup-content" id="step-1">
-                        <div class="panel-heading">
-                             <h3 class="panel-title">Presentation</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="form-group">
-                                <label class="control-label">1. Sets stimulating learning atmosphere</label>
+                <!-- /.modal -->
 
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">2. Use relevant examples illustrations to explain principles and concepts</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">3. Encourage and appreciates students participation</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">4. Presents contents logically and coherently</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">5. Presents contents logically and coherently</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">6. Delivers content in motivating manner</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">7. Uses relevant teaching aids(chalk board,projector,lab,apparatus</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">8. Provides a clear summary of concepts/principles covered in the lesson</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">9. Voice clear and audible</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-         
-         
-
-                            <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
-                        </div>
-                    </div>
-         
-                    <div class="panel panel-primary setup-content" id="step-2">
-                        <div class="panel-heading">
-                             <h3 class="panel-title">Suject Matter</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="form-group">
-                                <label class="control-label">1. Clear introduction of course objectives and relevancies</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">2. Demonstrate mastery of subject matter</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">3. Adequately covers course outline within the specified time</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">4. Depth of subject coverage(indepth as opposed to superficial treatment)</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">5. Provide guidance to relevant references</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">6. Subject matter relevance to course(as per course outline)</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">7. Assignments(relevant and useful)</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">8. Gives adequate and relevant assignments/CATs</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">9. Provides feedback of assignents/CATs promptly</label>
-
-                                <select id="star-rating" class="form-control"  required="required">
-                                    <option value="">Select a rating</option>
-                                    <option value="5">Excellent</option>
-                                    <option value="4">Very Good</option>
-                                    <option value="3">Average</option>
-                                    <option value="2">Poor</option>
-                                    <option value="1">Terrible</option>
-                                </select>
-                            </div>
-         
-         
-
-
-                            <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
-                        </div>
-                    </div>
-         
-                    <div class="panel panel-primary setup-content" id="step-3">
-                        <div class="panel-heading">
-                             <h3 class="panel-title">Personal Attributes</h3>
-                        </div>
-                        <div class="panel-body">
-                                <div class="form-group">
-                            <label class="control-label">1. Attendance/pantuality</label>
-                            
-                                                            <select id="star-rating" class="form-control"  required="required">
-                                                                <option value="">Select a rating</option>
-                                                                <option value="5">Excellent</option>
-                                                                <option value="4">Very Good</option>
-                                                                <option value="3">Average</option>
-                                                                <option value="2">Poor</option>
-                                                                <option value="1">Terrible</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">2. Interaction with students(friendly,approachable,caring,tolerant)</label>
-                            
-                                                            <select id="star-rating" class="form-control"  required="required">
-                                                                <option value="">Select a rating</option>
-                                                                <option value="5">Excellent</option>
-                                                                <option value="4">Very Good</option>
-                                                                <option value="3">Average</option>
-                                                                <option value="2">Poor</option>
-                                                                <option value="1">Terrible</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">3. Availability of lecturer for consultations</label>
-                            
-                                                            <select id="star-rating" class="form-control"  required="required">
-                                                                <option value="">Select a rating</option>
-                                                                <option value="5">Excellent</option>
-                                                                <option value="4">Very Good</option>
-                                                                <option value="3">Average</option>
-                                                                <option value="2">Poor</option>
-                                                                <option value="1">Terrible</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">4. Extent to which the consultations are helpful)</label>
-                            
-                                                            <select id="star-rating" class="form-control"  required="required">
-                                                                <option value="">Select a rating</option>
-                                                                <option value="5">Excellent</option>
-                                                                <option value="4">Very Good</option>
-                                                                <option value="3">Average</option>
-                                                                <option value="2">Poor</option>
-                                                                <option value="1">Terrible</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">5. Confident in presentation and subject matter</label>
-                            
-                                                            <select id="star-rating" class="form-control"  required="required">
-                                                                <option value="">Select a rating</option>
-                                                                <option value="5">Excellent</option>
-                                                                <option value="4">Very Good</option>
-                                                                <option value="3">Average</option>
-                                                                <option value="2">Poor</option>
-                                                                <option value="1">Terrible</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">6. Adequate lecture room preparation</label>
-                            
-                                                            <select id="star-rating" class="form-control"  required="required">
-                                                                <option value="">Select a rating</option>
-                                                                <option value="5">Excellent</option>
-                                                                <option value="4">Very Good</option>
-                                                                <option value="3">Average</option>
-                                                                <option value="2">Poor</option>
-                                                                <option value="1">Terrible</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">7. Students control/class discipline</label>
-                            
-                                                            <select id="star-rating" class="form-control"  required="required">
-                                                                <option value="">Select a rating</option>
-                                                                <option value="5">Excellent</option>
-                                                                <option value="4">Very Good</option>
-                                                                <option value="3">Average</option>
-                                                                <option value="2">Poor</option>
-                                                                <option value="1">Terrible</option>
-                                                            </select>
-                                                        </div>
-
-
-                            <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
-                        </div>
-                    </div>
-         
-                    <div class="panel panel-primary setup-content" id="step-4">
-                        <div class="panel-heading">
-                             <h3 class="panel-title">Save and Finish</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="form-group">
-                                <label class="control-label">Additional Comments</label>
-                                <input maxlength="200" id="text" type="text" required="required" class="form-control" placeholder="Enter Company Name" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Recommendation</label>
-                                <input maxlength="200" id="text" type="text" required="required" class="form-control" placeholder="Enter Company Address" />
-                            </div>
-                            <button class="btn btn-success pull-right" type="submit">Finish!</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-              </div>
-          </div>
 
                 
               <!-- ============================================================== -->
