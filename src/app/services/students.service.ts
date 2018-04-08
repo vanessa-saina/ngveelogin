@@ -26,11 +26,11 @@ export class StudentsService {
 
     getLectures(): Observable<Lecturer[]> {
         // add authorization header with jwt token
-        let headers = new Headers({ 'Authorization': 'token ' + this.authenticationService.token });
-        let options = new RequestOptions({ headers: headers });
+      //  let headers = new Headers({ 'Authorization': 'token ' + this.authenticationService.token });
+      //  let options = new RequestOptions({ headers: headers });
 
         // get users from api
-        return this.http.get('http://127.0.0.1:8000/users/view_lecturers/', options)
+        return this.http.get('http://127.0.0.1:8000/users/view_lecturers/')
             .map((response: Response) => response.json());
     }
 }
