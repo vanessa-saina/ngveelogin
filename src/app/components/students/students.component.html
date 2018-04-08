@@ -278,7 +278,6 @@
                     </div>
                 </div>
                 <!-- manage users -->
-               
                 <div class="row">
                     <!--<div class="col-md-6 col-lg-8 col-sm-12">-->
                     <div class="col-sm-12">
@@ -299,14 +298,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="text-center">1</td>
-                                        <td><img src="../plugins/images/users/sonu.jpg" class="img-circle" width="30" /></td>
-                                        <td><span class="font-medium">Daniel Kristeen</span></td>
-                                        <td>Visual Designer
-                                            <br /><span class="text-muted">Past : teacher</span></td>
-                                        <td>daniel@website.com
-                                            <br /><span class="text-muted">999 - 444 - 555</span></td>
+                                    <tr *ngFor="let lecturer of lecturers">
+                                        <td><img src="assets/plugins/images/users/user.png" class="img-circle" width="30" /></td>
+                                        <td><span class="font-medium"> {{lecturer.name}}</span></td>
+                                        <td>Science
+                                            <br /><span class="text-muted">Computer Science</span></td>
+                                        <td>{{lecturer.email}}
+                                            <br /><span class="text-muted">{{lecturer.email}}</span></td>
          
                                         <td>
                                             <select class="form-control">
@@ -320,70 +318,7 @@
                                             <button type="button" alt="default" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="text-center">2</td>
-                                         <td><img src="../plugins/images/users/sonu.jpg" class="img-circle" width="30" /></td>
-                                        <td><span class="font-medium">Daniel Kristeen</span></td>
-                                        <td>Visual Designer
-                                            <br /><span class="text-muted">Past : teacher</span></td>
-                                        <td>daniel@website.com
-                                            <br /><span class="text-muted">999 - 444 - 555</span></td>
-         
-                                        <td>
-                                            <select class="form-control">
-                                                <option>COMP 302</option>
-                                                <option>Admin</option>
-                                                <option>User</option>
-                                                <option>Subscriber</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                        
-                                            <button type="button" alt="default" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">3</td>
-                                         <td><img src="../plugins/images/users/sonu.jpg" class="img-circle" width="30" /></td>
-                                        <td><span class="font-medium">Daniel Kristeen</span></td>
-                                        <td>Visual Designer
-                                            <br /><span class="text-muted">Past : teacher</span></td>
-                                        <td>daniel@website.com
-                                            <br /><span class="text-muted">999 - 444 - 555</span></td>
-         
-                                        <td>
-                                            <select class="form-control">
-                                                <option>PHY 312</option>
-                                                <option>Admin</option>
-                                                <option>User</option>
-                                                <option>Subscriber</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                                <button type="button" alt="default" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">4</td>
-                                         <td><img src="../plugins/images/users/sonu.jpg" class="img-circle" width="30" /></td>
-                                        <td><span class="font-medium">Daniel Kristeen</span></td>
-                                        <td>Visual Designer
-                                            <br /><span class="text-muted">Past : teacher</span></td>
-                                        <td>daniel@website.com
-                                            <br /><span class="text-muted">999 - 444 - 555</span></td>
-         
-                                        <td>
-                                            <select class="form-control">
-                                                <option>COMP 305</option>
-                                                <option>Admin</option>
-                                                <option>User</option>
-                                                <option>Subscriber</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                                <button type="button" alt="default" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
-                                        </td>
-                                    </tr>
+                                
          
                                 </tbody>
                             </table>
