@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms'
+import { ReactiveFormsModule,FormsModule  } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
 import {HttpModule} from '@angular/http'
 //Router Module
 import { routing } from './app.routing';
@@ -31,6 +32,7 @@ import { StudentsComponent } from './components/students/index';
   imports: [
       BrowserModule,
       FormsModule,
+      ReactiveFormsModule,
       HttpModule,
       routing
   //    BrowserAnimationsModule,
