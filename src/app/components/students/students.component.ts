@@ -7,6 +7,11 @@ import { Students } from '../../models/index';
 import { Lecturer } from '../../models/index';
 import { UserService } from '../../services/index';
 import { StudentsService } from '../../services/index';
+import {Eval} from '../../models/eval';
+import {EvaluationService} from '../../services';
+import swal from 'sweetalert';
+
+
 
 @Component({
     moduleId: module.id,
@@ -17,6 +22,12 @@ export class StudentsComponent implements OnInit {
   //  users: User[] = [];
    studentss: Students[] = [];
    lecturers: Lecturer[] = [];
+   m_eval: Eval ;
+
+  student_id: string;
+ lecturer_id: string;
+  unit_id: string;
+
    cat = ["Is the Teacher crazy","Teaching skills sexy","Twerking level","Sing well"];
    qat = {
      "questions": [{
@@ -105,7 +116,7 @@ export class StudentsComponent implements OnInit {
   user: User = JSON.parse(localStorage.getItem('currentUser'));
   myForm: FormGroup;
   //  constructor(private userService: UserService) { }
- constructor(private studentsService: StudentsService, private fb: FormBuilder) { }
+ constructor(private studentsService: StudentsService, private fb: FormBuilder, private evaluationService: EvaluationService) { }
 
     ngOnInit() {
         // get users from secure api end point
@@ -115,16 +126,18 @@ export class StudentsComponent implements OnInit {
             });
 */
 this.myForm = this.fb.group({
-    evaluation_id:["", Validators.required],
-    comments:["", Validators.required],
-  recommendation:["", Validators.required],
+  student_id: [''],
+  lecturer_id: [''],
+  unit_id: [''],
+    comments: [''],
+  recommendation: [''],
     questions: this.fb.array([
     ])
   });
 
   for (let q of this.qat.questions){
     //  this.initAddress2(c);
-      this.addQuestion(q.quiz);
+      this.addQuestion(q.quiz, q.category);
 
 
   }
@@ -148,15 +161,16 @@ localStorage.getItem('currentUser');
             rating: ['', Validators.required]
         });
     }
-    initQuestion(question: String) {
+    initQuestion(question: String, category: String) {
         return this.fb.group({
             rating: ['', Validators.required],
+            category: [category],
             question: [question]
         });
     }
-    addQuestion(q: String) {
+    addQuestion(q: String, c: String) {
         const control = <FormArray>this.myForm.controls['questions'];
-        control.push(this.initQuestion(q));
+        control.push(this.initQuestion(q, c));
      //  console.log("Arrya: ", control.value);
     }
     registerUser(form) {
@@ -165,9 +179,28 @@ localStorage.getItem('currentUser');
         // ... <-- now use JSON.stringify() to convert form values to json.
       }
       submit() {
+        this.myForm.value.student_id = this.student_id;
+        this.myForm.value.lecturer_id = this.student_id;
+        this.myForm.value.unit_id = '23d0e9f678fc4162a960a4c26a11c2b4';
+
+        this.evaluationService.create_evaluation(JSON.stringify(this.myForm.value)).subscribe(result => {
+
+          if (result === true) {
+            swal("Done!", "You have Evaluated the lecture!", "success");
+          }else {
+          }
+          swal("Done!", "You have Evaluated the lecture!", "success");
+        });
         console.log("Reactive Form submitted: ", JSON.stringify(this.myForm.value) );
+
+
      //  this. addAddress();
       }
-
+  sendEval(index: number) {
+    console.log("Eval_index: ", this.lecturers[index].id );
+   this.lecturer_id = this.lecturers[index].id;
+   this.student_id = this.user.id;
+    console.log("Eval: ", this.lecturer_id + this.student_id );
+  }
 }
 

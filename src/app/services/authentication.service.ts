@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs';
-import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class AuthenticationService {
@@ -31,6 +31,7 @@ export class AuthenticationService {
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
                 let token = response.json() && response.json().token;
+                let id = response.json() && response.json().id;
                 let role = response.json() && response.json().role;
                 let institute = response.json() && response.json().institute;
                 let person_name = response.json() && response.json().name;
@@ -41,7 +42,7 @@ export class AuthenticationService {
                     //    { name: name, token: token, role: role, institute: institute }
 
                     // store username and jwt token in local storage to keep user logged in between page refreshes
-                    localStorage.setItem('currentUser', JSON.stringify({ username: username, token: token,  name: person_name, role: role, institute: institute }));
+                    localStorage.setItem('currentUser',  JSON.stringify({ id: id, username: username, token: token,  name: person_name, role: role, institute: institute }));
 
                     // return true to indicate successful login
                     return true;

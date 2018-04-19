@@ -1,5 +1,5 @@
-export class Students{
-    token:string;
+export class Students {
+    token: string;
     id: string;
     name: string;
 }

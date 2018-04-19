@@ -20,7 +20,7 @@ export class StudentsService {
         let options = new RequestOptions({ headers: headers });
 
         // get users from api
-        return this.http.get('http://127.0.0.1:4200/services/get_students/', options)
+        return this.http.get('http://127.0.0.1:8000/services/get_students/', options)
             .map((response: Response) => response.json());
     }
 
