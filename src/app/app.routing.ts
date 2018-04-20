@@ -10,7 +10,7 @@ import { AdminComponent } from './components/admin/index';
 const appRoutes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'students', component: StudentsComponent, canActivate: [AuthGuard] },
-    { path: 'lecturer', component: LecturerComponent, canActivate: [AuthGuard] },
+    { path: 'lecturers', component: LecturerComponent, canActivate: [AuthGuard] },
     { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
 
     // otherwise redirect to login

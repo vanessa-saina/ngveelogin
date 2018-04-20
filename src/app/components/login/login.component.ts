@@ -32,12 +32,12 @@ export class LoginComponent implements OnInit {
                 if (result === true) {
                     // login successful
                     let user = JSON.parse(localStorage.getItem('currentUser'));
-                    if(user.role=="student"){
+                    if (user.role=="student") {
                         this.router.navigate(['/students']);
-                    }else if(user.role=="lecture"){
+                    }else if (user.role == "lecturer") {
                         this.router.navigate(['/lecturers']);
                     }else if(user.role=="admin"){
-                        this.router.navigate(['/admin'])
+                        this.router.navigate(['/admin']);
                     }
                 }else {
                     // login failed

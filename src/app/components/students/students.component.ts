@@ -180,7 +180,7 @@ localStorage.getItem('currentUser');
       }
       submit() {
         this.myForm.value.student_id = this.student_id;
-        this.myForm.value.lecturer_id = this.student_id;
+        this.myForm.value.lecturer_id = this.lecturer_id;
         this.myForm.value.unit_id = '23d0e9f678fc4162a960a4c26a11c2b4';
 
         this.evaluationService.create_evaluation(JSON.stringify(this.myForm.value)).subscribe(result => {
