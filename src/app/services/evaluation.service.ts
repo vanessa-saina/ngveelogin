@@ -21,7 +21,13 @@ export class EvaluationService {
 
   create_evaluation(evaluation: string):  Observable<boolean>  {
     // add authorization header with jwt token
-    let headers = new Headers({ 'Authorization': 'token ' + this.authenticationService.token });
+    let headers = new Headers({
+      'Authorization': 'token ' + this.authenticationService.token,
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE',
+      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+    });
     let options = new RequestOptions({ headers: headers });
 
     // get users from api
